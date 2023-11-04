@@ -18,7 +18,7 @@ const SchoolRegistration = () => {
   useEffect(() => {
     const handleSchoolRegistration = async () => {
       try {
-        const url = `http://localhost:4000/users/${param.id}/registration/${param.token}`;
+        const url = `https://corneredu.onrender.com/users/${param.id}/registration/${param.token}`;
         const { data } = await axios.get(url);
         console.log(data);
         setValidUrl(true);

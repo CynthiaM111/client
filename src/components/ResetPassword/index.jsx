@@ -16,7 +16,7 @@ const ResetPassword = () => {
 
   const handleResetPassword = async () => {
     try {
-      const response = await axios.post(`http://localhost:4000/users/${id}/reset-password/${token}`, { password });
+      const response = await axios.post(`https://corneredu.onrender.com/users/${id}/reset-password/${token}`, { password });
       setMessage(response.data.message);
     } catch (error) {
       if (error.response) {

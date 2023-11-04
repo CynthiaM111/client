@@ -3,7 +3,7 @@ import { getAuthHeader } from './config'
 import { notification } from 'antd'
 
 
-export const baseURL = '/notification'
+export const baseURL = 'https://corneredu.onrender.com/notification'
 
 const getAllNotifications = async () => {
   const response = await axios.get(

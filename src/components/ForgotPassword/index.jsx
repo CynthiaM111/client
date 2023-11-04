@@ -11,7 +11,7 @@ const ForgotPassword = () => {
 
   const handleRecoverPassword = async () => {
     try {
-      const response = await axios.post('http://localhost:4000/users/reset', { email });
+      const response = await axios.post('https://corneredu.onrender.com/users/reset', { email });
       setMessage(response.data.message);
     } catch (error) {
       if(error.response){

@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { getAuthHeader } from './config'
 
-export const baseURL = '/discussions'
+export const baseURL = 'https://corneredu.onrender.com/discussions'
 
 
 const getAllDiscussions = async (courseId) => {
