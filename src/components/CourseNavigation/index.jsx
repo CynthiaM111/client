@@ -26,11 +26,11 @@ const CourseMenu = ({ url, privilege }) => {
         <Link to={`${url}/assignments`}>Assignments</Link>
       </Menu.Item> */}
 
-      {privilege !== 'student' && (
-        <Menu.Item>
-          <Link to={`${url}/particpants`}>Participants</Link>
-        </Menu.Item>
-      )}
+      {/* {privilege !== 'student' && ( */}
+      <Menu.Item>
+        <Link to={`${url}/particpants`}>Participants</Link>
+      </Menu.Item>
+      
 
       {privilege !== 'student' && (
         <Menu.Item>
