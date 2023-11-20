@@ -41,11 +41,11 @@ const CourseParticipants = () => {
         rowKey={(participant) => participant.id}
         dataSource={participants}
       >
-        {/* <Column
+        <Column
           title="Photo"
           dataIndex={['user', 'photo']}
           render={(img) => <Avatar src={img} />}
-        /> */}
+        />
         <Column title="Name" dataIndex={['user', 'name']} />
         <Column title="Email" dataIndex={['user', 'email']} />
         <Column
