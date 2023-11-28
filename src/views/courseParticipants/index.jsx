@@ -72,7 +72,14 @@ const CourseParticipants = () => {
             // if (course?.createdBy?._id === record.user._id) {
             //   return 'Course Owner'
             // }
-            if (course && course.createdBy && course.createdBy._id && course.createdBy._id === record.user._id) {
+            if (
+              course &&
+              course.createdBy &&
+              course.createdBy._id &&
+              record.user &&
+              record.user._id &&
+              course.createdBy._id === record.user._id
+            ) {
               return 'Course Owner';
             }
             return (
