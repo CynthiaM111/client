@@ -63,11 +63,17 @@ const CourseParticipants = () => {
         <Column
           title="Action"
           render={(text, record, index) => {
-            if (user._id === record.user._id) {
-              return 'Current user'
+            // if (user._id === record.user._id) {
+            //   return 'Current user'
+            // }
+            if (user && user._id && record.user && record.user._id && user._id === record.user._id) {
+              return 'Current user';
             }
-            if (course?.createdBy?._id === record.user._id) {
-              return 'Course Owner'
+            // if (course?.createdBy?._id === record.user._id) {
+            //   return 'Course Owner'
+            // }
+            if (course && course.createdBy && course.createdBy._id && course.createdBy._id === record.user._id) {
+              return 'Course Owner';
             }
             return (
               <>
