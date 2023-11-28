@@ -131,7 +131,7 @@ const AuthnticatedApp = () => {
           <Route path="/app/upload" component={FileUpload} />
             {/* redirect to courses page for now */}
             <Route exact path="/app/"> 
-               <Redirect to="/app/courses" />
+               <Redirect to="/app/login" />
         
             </Route>
 

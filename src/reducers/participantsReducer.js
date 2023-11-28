@@ -18,14 +18,11 @@ const participantsReducer = (state = { data: [], loading: false }, action) => {
 export const getAllParticipants = (courseId) => {
   return async (dispatch) => {
     try {
-      console.log('NOT WORKING')
+      
       dispatch({ type: LOAD_PARTICIPANTS })
-      console.log("1111")
+     
       const response = await enrollmentsService.getEnrollments(courseId)
-      console.log("2222")
-      console.log('Participants Data:', response);
-
-
+     
       dispatch({ type: GET_ALL_PARTICIPANTS, data: response })
       console.log("333")
     } catch (error) {
