@@ -9,7 +9,8 @@ const participantsReducer = (state = { data: [], loading: false }, action) => {
     case LOAD_PARTICIPANTS:
       return { data: [], loading: true }
     case GET_ALL_PARTICIPANTS:
-      return { data: action.data, loading: false }
+      const newData = Array.isArray(action.data) ? action.data : [];
+      return { data: newData, loading: false }
     default:
       return state
   }

@@ -41,7 +41,7 @@ const Archives = (props) => {
             <CourseCard
               course={course}
               disableEnroll
-              onClick={() => history.push(`/app/course/${course.id}/modules`)}
+              onClick={() => history.push(`/app/course/${course.id}/discussions`)}
             />
           </List.Item>
         )}
