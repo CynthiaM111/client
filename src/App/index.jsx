@@ -26,7 +26,7 @@ import Profile from '../views/Profile'
 // import Exams from '../views/exams'
 import { AssessmentCreation, Submissions } from '../views/exams'
 // import Lectures from '../views/lectures'
-// import Modules from '../views/modules'
+import Modules from '../views/modules'
 import AssessmentTaking from '../views/assessmentTaking'
 import DiscussionFeed from '../views/discussions'
 import AnnouncementsFeed from '../views/announcements'
@@ -64,17 +64,14 @@ const App = () => {
   return (
     <Switch>
       <Route path="/Register" component={Registeration} />     
-      {/* <PublicRoute path="/ForgetPassword" component={ForgetPassword} />
-      <PublicRoute path="/reset/:token" component={ResetPassword} /> */}
+      
       <PublicRoute path="/Login" component={Login} />
       <Route path="/users/:id/verify/:token" component={EmailVerify} />
       <Route path="/users/:id/registration/:token" component={schoolRegistration} />
       <Route path="/registration-confirmation" component={RegistrationConfirmation} />
       <Route path ="/users/:id/approveAdmin" component ={AdminApproval} />
       <Route path="/account-verification" component={AccountVerification} />
-      {/* <Route path="/forgot-password" component={ForgotPassword} />
-      <Route path="/reset-password/:token/:id" component={ResetPassword} /> */}
-
+      
       <Route path="/forgot-password" exact component={ForgotPassword} />
         
       <Route path="/users/:id/reset-password/:token" component={ResetPassword} />
@@ -139,10 +136,10 @@ const AuthnticatedApp = () => {
             <Route path="/app/calendar" component={CourseCalendar} />
 
             <Route path="/app/courses" component={Courses} />
-            {/* <CourseRoute
+            <CourseRoute
               path="/app/course/:courseId/modules"
               component={Modules}
-            /> */}
+            /> 
 
             {/* <CourseRoute
               path="/app/course/:courseId/assessment/:assessmentId/submissions"
@@ -157,7 +154,7 @@ const AuthnticatedApp = () => {
               render={(props) => (
                 <AssessmentCreation {...props} assessmentType="Exam" />
               )}
-            /> */}
+            />
             <CourseRoute
               path="/app/course/:courseId/assignments/create"
               render={(props) => (

@@ -114,7 +114,7 @@ export const enroll = (courseId, userId, university) => {
       const response = await courseService.enrollCourse(courseId, userId, university)
       dispatch({ type: ENROLL_COURSE, data: response })
       notification.success({
-        message: 'enrolled successfully'
+        message: 'Enrolled successfully'
       })
     } catch (error) {
       console.log(error)

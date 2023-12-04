@@ -74,7 +74,7 @@ const Courses = () => {
   }
 
   const handleCourseCardClick = (courseId, userId, userEnrolled) => {
-    if (userEnrolled) history.push(`/app/course/${courseId}/discussions`)
+    if (userEnrolled) history.push(`/app/course/${courseId}/modules`)
     else confirmEnrolled(courseId, userId)
   }
 
