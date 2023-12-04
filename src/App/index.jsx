@@ -140,8 +140,8 @@ const AuthnticatedApp = () => {
               path="/app/course/:courseId/modules"
               component={Modules}
             /> 
-
-            {/* <CourseRoute
+ 
+            <CourseRoute
               path="/app/course/:courseId/assessment/:assessmentId/submissions"
               component={Submissions}
             />
@@ -161,7 +161,7 @@ const AuthnticatedApp = () => {
                 <AssessmentCreation {...props} assessmentType="Assignment" />
               )}
             />
-            {/* <CourseRoute path="/app/course/:courseId/exams" component={Exams} /> */}
+            <CourseRoute path="/app/course/:courseId/exams" component={Exams} /> 
             <CourseRoute
               path="/app/course/:courseId/assignments"
               component={Assignments}
@@ -197,12 +197,12 @@ const AuthnticatedApp = () => {
                 />
               )}
             />
-            {/* <CourseRoute
+             <CourseRoute
               path="/app/course/:courseId/gradebook"
               render={(props) => (
                 <GradeBook {...props} courseId={props.match.params.courseId} />
               )}
-            /> */}
+            />
             <CourseRoute
               path="/app/course/:courseId/announcments"
               render={(props) => (

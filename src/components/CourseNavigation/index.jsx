@@ -12,25 +12,20 @@ import useCoursePrivilege from '../../hooks/useCourseprivilege'
 const CourseMenu = ({ url, privilege }) => {
   return (
     <Menu>
-      
+      <Menu.Item>
+        <Link to={`${url}/announcments`}>Announcments</Link>
+      </Menu.Item>
       <Menu.Item>
         <Link to={`${url}/gradebook`}>GradeBook</Link>
       </Menu.Item>
       <Menu.Item>
         <Link to={`${url}/discussions`}>Questions</Link>
       </Menu.Item>
-      <Menu.Item>
-        <Link to={`${url}/announcments`}>Announcements</Link>
-      </Menu.Item>
-      <Menu.Item>
-        <Link to={`${url}/assignments`}>Assignments</Link>
-      </Menu.Item>
-
-      {/* {privilege !== 'student' && ( */}
-      <Menu.Item>
-        <Link to={`${url}/particpants`}>Participants</Link>
-      </Menu.Item>
-      
+      {privilege !== 'student' && (
+        <Menu.Item>
+          <Link to={`${url}/particpants`}>Particpants</Link>
+        </Menu.Item>
+      )}
 
       {privilege !== 'student' && (
         <Menu.Item>
@@ -39,6 +34,7 @@ const CourseMenu = ({ url, privilege }) => {
       )}
     </Menu>
   )
+    
 }
 
 const CourseNavigation = () => {
@@ -86,29 +82,17 @@ const CourseNavigation = () => {
       <NavLink to={`${url}/lectures`}>
         <Button type="text">Lectures</Button>
       </NavLink>
-       <NavLink to={`${url}/discussions`}>
-       <Button type="text">Questions</Button>
-      </NavLink>
-      <NavLink to={`${url}/announcments`}>
-       <Button type="text">Announcements</Button>
-      </NavLink>
-     
       <NavLink to={`${url}/assignments`}>
         <Button type="text">Assignments</Button>
       </NavLink>
-      <NavLink to={`${url}/particpants`}>
-       <Button type="text">Participants</Button>
-      </NavLink>
-      {privilege !== 'student' && (
-      <NavLink to={`${url}/settings`}>
-       <Button type="text">Settings</Button>
-      </NavLink>)}
       <NavLink to={`${url}/exams`}>
         <Button type="text">Exams</Button>
-      </NavLink> 
-       <NavLink to={`${url}/exam/12345`} target="_blank">
-        <Button type="text">CheatingDetection</Button>
       </NavLink>
+
+     
+       {/* <NavLink to={`${url}/exam/12345`} target="_blank">
+        <Button type="text">CheatingDetection</Button>
+      </NavLink> */}
         
        
     </>
