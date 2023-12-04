@@ -13,18 +13,18 @@ const CourseMenu = ({ url, privilege }) => {
   return (
     <Menu>
       
-      {/* <Menu.Item>
+      <Menu.Item>
         <Link to={`${url}/gradebook`}>GradeBook</Link>
-      </Menu.Item> */}
+      </Menu.Item>
       <Menu.Item>
         <Link to={`${url}/discussions`}>Questions</Link>
       </Menu.Item>
       <Menu.Item>
         <Link to={`${url}/announcments`}>Announcements</Link>
       </Menu.Item>
-      {/* <Menu.Item>
+      <Menu.Item>
         <Link to={`${url}/assignments`}>Assignments</Link>
-      </Menu.Item> */}
+      </Menu.Item>
 
       {/* {privilege !== 'student' && ( */}
       <Menu.Item>
@@ -80,12 +80,12 @@ const CourseNavigation = () => {
           </Button>
         </Dropdown>
       </Space>
-      {/* <NavLink to={`${url}/modules`}>
+      <NavLink to={`${url}/modules`}>
         <Button type="text">Modules</Button>
       </NavLink>
       <NavLink to={`${url}/lectures`}>
         <Button type="text">Lectures</Button>
-      </NavLink> */}
+      </NavLink>
        <NavLink to={`${url}/discussions`}>
        <Button type="text">Questions</Button>
       </NavLink>
@@ -93,9 +93,9 @@ const CourseNavigation = () => {
        <Button type="text">Announcements</Button>
       </NavLink>
      
-      {/* <NavLink to={`${url}/assignments`}>
+      <NavLink to={`${url}/assignments`}>
         <Button type="text">Assignments</Button>
-      </NavLink> */}
+      </NavLink>
       <NavLink to={`${url}/particpants`}>
        <Button type="text">Participants</Button>
       </NavLink>
@@ -103,12 +103,12 @@ const CourseNavigation = () => {
       <NavLink to={`${url}/settings`}>
        <Button type="text">Settings</Button>
       </NavLink>)}
-      {/* <NavLink to={`${url}/exams`}>
+      <NavLink to={`${url}/exams`}>
         <Button type="text">Exams</Button>
-      </NavLink> */}
-      {/* <NavLink to={`${url}/exam/12345`} target="_blank">
+      </NavLink> 
+       <NavLink to={`${url}/exam/12345`} target="_blank">
         <Button type="text">CheatingDetection</Button>
-      </NavLink> */}
+      </NavLink>
         
        
     </>

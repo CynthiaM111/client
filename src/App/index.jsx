@@ -25,7 +25,7 @@ import ArticlePage from '../views/ArticlePage'
 import Profile from '../views/Profile'
 // import Exams from '../views/exams'
 import { AssessmentCreation, Submissions } from '../views/exams'
-// import Lectures from '../views/lectures'
+import Lectures from '../views/lectures'
 import Modules from '../views/modules'
 import AssessmentTaking from '../views/assessmentTaking'
 import DiscussionFeed from '../views/discussions'
@@ -166,14 +166,14 @@ const AuthnticatedApp = () => {
               path="/app/course/:courseId/assignments"
               component={Assignments}
             />
-            {/* <CourseRoute
+            <CourseRoute
               path="/app/course/:courseId/lectures/:lectureId"
               component={Lectures}
             />
             <CourseRoute
               path="/app/course/:courseId/lectures"
               component={Lectures}
-            /> */}
+            />
 
             <CourseRoute
               path="/app/course/:courseId/exam/:assessmentId"
