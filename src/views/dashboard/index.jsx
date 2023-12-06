@@ -238,6 +238,8 @@ const DeadlinesViewer = (props) => {
 
   if (loading) return <Spinner size="large" />
 
+  const filteredDeadlines = Array.isArray(deadlines) ? deadlines.filter((item) => DateTime.fromISO(item.deadline) >= DateTime.now()) : [];
+
   return (
     <DeadLinesContainer>
       <div
@@ -254,11 +256,13 @@ const DeadlinesViewer = (props) => {
           Upcoming Deadlines
         </Typography.Title>
       </div>
+     
       <List
         style={{ maxHeight: '445px', overflow: 'hidden', overflowY: 'auto' }}
-        dataSource={deadlines.filter((item) => {
-          return DateTime.fromISO(item.deadline) >= DateTime.now()
-        })}
+        // dataSource={deadlines.filter((item) => {
+        //   return DateTime.fromISO(item.deadline) >= DateTime.now()
+        // })}
+        dataSource={filteredDeadlines}
         locale={{
           emptyText: (
             <Empty
