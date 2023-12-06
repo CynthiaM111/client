@@ -76,7 +76,7 @@ const Dashboard = () => {
   }
 
   const handleCourseCardClick = (courseId) => {
-    history.push(`/app/course/${courseId}/discussions`)
+    history.push(`/app/course/${courseId}/modules`)
   }
 
   if (loading) return <Spinner size="large" />
@@ -210,7 +210,7 @@ const Dashboard = () => {
         </Col>
 
         <Col xs={24} sm={24} md={24} lg={8} xl={5}>
-          {/* <DeadlinesViewer loading={deadlinesLoading} deadlines={deadlines} /> */}
+          <DeadlinesViewer loading={deadlinesLoading} deadlines={deadlines} />
         </Col>
       </Row>
     </>

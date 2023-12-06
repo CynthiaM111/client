@@ -105,6 +105,7 @@ const LectureComments = (props) => {
     return []
   }
 
+  
   return (
     <Container>
       <Typography.Title level={4}>Comments</Typography.Title>
@@ -117,15 +118,15 @@ const LectureComments = (props) => {
             <Comment
               style={{ color: '#000000d9' }}
               actions={getActions(
-                user._id,
-                comment.user._id,
+                user?. _id,
+                comment?.user?. _id,
                 selectedLecture.id,
                 comment.id
               )}
               author={
-                <Typography.Text strong>{comment.user.name}</Typography.Text>
+                <Typography.Text strong>{comment.user?.name}</Typography.Text>
               }
-              avatar={<Avatar src={comment.user.photo} />}
+              avatar={<Avatar src={comment.user?.photo} />}
               content={comment.comment}
               datetime={DateTime.fromISO(comment.updatedAt).toRelative()}
             />

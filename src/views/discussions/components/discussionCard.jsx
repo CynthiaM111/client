@@ -101,12 +101,6 @@ const DiscussionCard = ({ discussion, user }) => {
     }
   };
   
-
-
-
-  // const userAvatar = discussion.user ? discussion.user.photo : null;
-  // const userName = discussion.user.name ? discussion.user.name : "Anonymous";
-  // const userRole = discussion.user.role && discussion.user.role === 'instructor' ? 'INSTRUCTOR' : 'STUDENT';
   return (
     <div className="container">
       <Card
@@ -142,7 +136,7 @@ const DiscussionCard = ({ discussion, user }) => {
                   dispatch(removeDiscussion(discussion._id))
                 }}
               >
-                delete
+                Delete
               </Button>
             )}
             
@@ -160,10 +154,10 @@ const DiscussionCard = ({ discussion, user }) => {
               <CheckCircleOutlined /> Answered
             </Tag>
           )}
-          {/* {discussion.isPrivate==='Yes' (
-            <Tag color="magenta" style={{ marginLeft: '8px' }}>
+          {discussion.isPrivate && (
+            <Tag color="#ff5757" style={{ marginLeft: '8px' }}>
               PRIVATE
-            </Tag>)} */}
+            </Tag>)}
         </span>
       </div>
         <div style={{ fontSize: '12px', fontWeight: 'italic',color: 'green', marginTop: '5px' }}>
@@ -208,7 +202,8 @@ const DiscussionCard = ({ discussion, user }) => {
         
       </Card>
     </div>
-  )
+ 
+    )
 }
 
 export default DiscussionCard

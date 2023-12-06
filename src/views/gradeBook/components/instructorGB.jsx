@@ -33,7 +33,7 @@ const InstructorGradeBook = ({ courseId, id }) => {
             setShowst(true)
           }}
         >
-          {text.name}
+          {text?.name}
         </a>
       )
     },

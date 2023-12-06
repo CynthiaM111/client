@@ -57,31 +57,18 @@ export const getAllDiscussions = (courseId) => {
   }
 }
 
-export const addDiscussion = (courseId, data, category, title,isAnonymous ) => {
+export const addDiscussion = (courseId, data, category, title,isAnonymous, isPrivate) => {
   return async (dispatch) => {
     try {
       
       const ver = await checkModerationService.check(data)
       
       if (ver) {
-        console.log('STARTTTTTT')
-
-        console.log( courseId)
         
-        console.log( category)
-        console.log(title)
-        console.log(isAnonymous  )
+        const response = await discussionService.addDiscussion(courseId, data, category, title,isAnonymous,isPrivate)
         
-        
-
-        const response = await discussionService.addDiscussion(courseId, data, category, title,isAnonymous)
-        console.log('START111111')
-
-       
         dispatch({ type: ADD_DISCUSSION, data: response })
-        console.log('STARTTT33333444')
-
-       
+        
         notification.success({
           message: 'Posted successfully'
         })

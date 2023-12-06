@@ -1,6 +1,8 @@
 import axios from 'axios'
 import { getAuthHeader } from './config'
 
+//export const baseURL = '/discussions'
+
 export const baseURL = 'https://corneredu.onrender.com/discussions'
 
 
@@ -12,7 +14,7 @@ const getAllDiscussions = async (courseId) => {
   return response.data
 }
 
-const addDiscussion = async (courseId, data, category, title,isAnonymous) => {
+const addDiscussion = async (courseId, data, category, title,isAnonymous,isPrivate) => {
   console.log(category)
   console.log(courseId)
   const response = await axios.post(
@@ -21,7 +23,8 @@ const addDiscussion = async (courseId, data, category, title,isAnonymous) => {
         data: data,
         category: category,
         title:title,
-        isAnonymous:isAnonymous
+        isAnonymous:isAnonymous,
+        isPrivate:isPrivate
         
     },
     getAuthHeader()

@@ -1,6 +1,8 @@
 import axios from 'axios'
 import { getAuthHeader } from './config'
 
+//export const baseURL = '/courses'
+
 export const baseURL = 'https://corneredu.onrender.com/courses'
 
 

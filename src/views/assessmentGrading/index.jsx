@@ -200,7 +200,7 @@ const GradingPage = (props) => {
                     onClick={() => setSelectedIndex(selectedIndex - 1)}
                     disabled={selectedIndex === 0}
                   ></Button>
-                  <Text>{submissions[selectedIndex].student.name}</Text>
+                  <Text>{submissions[selectedIndex].student?.name}</Text>
                   <Button
                     type="text"
                     icon={<ArrowRightOutlined />}
