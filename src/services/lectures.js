@@ -21,8 +21,9 @@ const getLecturesData = async (videoIds) => {
     {
       params: {
         part: 'snippet,contentDetails',
-        id: videoIds,
-        key: process.env.REACT_APP_YOUTUBE_API_KEY
+        id: videoIds,                               
+        // key: process.env.REACT_APP_YOUTUBE_API_KEY
+        key:'AIzaSyBmjenrHqw_5VVjFFz2PthbR2uVlOW2JHY'
       }
     }
   )
