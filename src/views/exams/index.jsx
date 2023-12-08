@@ -50,11 +50,17 @@ const Exams = () => {
           Active
         </Text>
 
-        <List
+        {/* <List
           dataSource={exams.filter((exam) => exam.status.code !== 'closed')}
           renderItem={(exam) => <ExamItem exam={exam} />}
         />
-      </div>
+      </div> */}
+        <List
+        dataSource={exams && exams.filter((exam) => exam.status && exam.status.code !== 'closed')}
+        renderItem={(exam) => <ExamItem exam={exam} />}
+      />
+       </div> 
+
 
       <div
         style={{
