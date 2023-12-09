@@ -11,7 +11,9 @@ const examReducer = (state = { data: [], loading: false }, action) => {
     case LOAD_EXAMS:
       return { data: [], loading: true }
     case GET_ALL_EXAMS:
-      return { data: action.data, loading: false }
+      const newData = Array.isArray(action.data) ? action.data : [];
+      return { data: newData, loading: false };
+     // return { data: action.data, loading: false }
     case DELETE_EXAM:
       return {
         data: state.data.filter((exam) => exam.id !== action.examId),
