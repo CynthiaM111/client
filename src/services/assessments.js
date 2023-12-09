@@ -8,6 +8,7 @@ const getAllExams = async (courseId) => {
     ...getAuthHeader(),
     params: { filter: 'Exam' }
   })
+  console.log('API Response:', response);
   return response.data
 }
 
