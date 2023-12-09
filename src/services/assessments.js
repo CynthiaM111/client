@@ -17,6 +17,7 @@ const getAllAssignments = async (courseId) => {
     ...getAuthHeader(),
     params: { filter: 'Assignment' }
   })
+  console.log('API Response:', response);
   return response.data
 }
 

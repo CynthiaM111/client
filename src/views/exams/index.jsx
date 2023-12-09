@@ -57,11 +57,7 @@ const Exams = () => {
           renderItem={(exam) => <ExamItem exam={exam} />}
         />
       </div>
-      {/* <List
-      dataSource={Array.isArray(exams) ? exams.filter((exam) => exam.status && exam.status.code !== 'closed') : []}
-      renderItem={(exam) => <ExamItem exam={exam} />}
-    />
-     </div> */}
+    
 
        
 

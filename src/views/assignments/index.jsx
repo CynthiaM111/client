@@ -26,6 +26,7 @@ const Assignments = () => {
   const { enrolled, privilege } = useCoursePrivilege()
 
   const assignments = useSelector((state) => state.assignments.data)
+  console.log('Type of assignment:', typeof assignments);
 
   useEffect(() => {
     dispatch(getAllAssignments(courseId))
@@ -139,11 +140,11 @@ const AssignmentItem = ({ assignment, disabled }) => {
         <Space size="small" direction="vertical">
           <Space>
             <span>
-              <Text type="secondary">weight: </Text>
+              <Text type="secondary">Weight: </Text>
               <Text strong>{`${assignment.weight * 100}%`}</Text>
             </span>
             <span>
-              <Text type="secondary">maxScore: </Text>
+              <Text type="secondary">MaxScore: </Text>
               <Text strong>{assignment.maxScore}</Text>
             </span>
             <span>
