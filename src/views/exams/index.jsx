@@ -24,6 +24,8 @@ const Exams = () => {
   const { enrolled, privilege } = useCoursePrivilege()
 
   const exams = useSelector((state) => state.exams.data)
+  console.log('Type of exams:', typeof exams);
+
 
   useEffect(() => {
     dispatch(getAllExams(courseId))
@@ -50,16 +52,16 @@ const Exams = () => {
           Active
         </Text>
 
-        {/* <List
+        <List
           dataSource={exams.filter((exam) => exam.status.code !== 'closed')}
           renderItem={(exam) => <ExamItem exam={exam} />}
         />
-      </div> */}
-      <List
+      </div>
+      {/* <List
       dataSource={Array.isArray(exams) ? exams.filter((exam) => exam.status && exam.status.code !== 'closed') : []}
       renderItem={(exam) => <ExamItem exam={exam} />}
     />
-     </div>
+     </div> */}
 
        
 
@@ -74,8 +76,8 @@ const Exams = () => {
         </Text>
 
         <List
-          //dataSource={exams.filter((exam) => exam.status.code === 'closed')}
-          dataSource={Array.isArray(exams) ? exams.filter((exam) => exam.status && exam.status.code === 'closed') : []}
+          dataSource={exams.filter((exam) => exam.status.code === 'closed')}
+          //dataSource={Array.isArray(exams) ? exams.filter((exam) => exam.status && exam.status.code === 'closed') : []}
           renderItem={(exam) => <ExamItem exam={exam} disabled={true} />}
         />
       </div>
