@@ -27,6 +27,7 @@ const Assignments = () => {
 
   const assignments = useSelector((state) => state.assignments.data)
   console.log('Type of assignment:', typeof assignments);
+  console.log('API getAllAssignments Response:', assignments);
 
   useEffect(() => {
     dispatch(getAllAssignments(courseId))
