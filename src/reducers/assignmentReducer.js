@@ -12,15 +12,13 @@ const assignmentReducer = (state = { data: [], loading: false }, action) => {
       return { data: [], loading: true }
     case GET_ALL_ASSIGNMENTS:
       return { data: action.data, loading: false }
-    // 
     case DELETE_ASSIGNMENTS:
       return {
-        data: Array.isArray(state.data)
-          ? state.data.filter((assignment) => assignment && assignment.id !== action.assignmentId)
-          : [],
+        data: state.data.filter(
+          (assignment) => assignment.id !== action.assignmentId
+        ),
         loading: false
       }
-
     default:
       return state
   }
