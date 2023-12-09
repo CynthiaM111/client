@@ -25,7 +25,7 @@ const Exams = () => {
 
   const exams = useSelector((state) => state.exams.data)
   console.log('Type of exams:', typeof exams);
-  console.log('API getExam:', response);
+  console.log('API getExam:', exams)
 
 
   useEffect(() => {
