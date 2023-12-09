@@ -8,7 +8,7 @@ const getAllExams = async (courseId) => {
     ...getAuthHeader(),
     params: { filter: 'Exam' }
   })
-  console.log('API Response:', response);
+  console.log('API 11:', response);
   return response.data
 }
 
@@ -17,7 +17,7 @@ const getAllAssignments = async (courseId) => {
     ...getAuthHeader(),
     params: { filter: 'Assignment' }
   })
-  console.log('API Response:', response);
+  console.log('API 22:', response);
   return response.data
 }
 
